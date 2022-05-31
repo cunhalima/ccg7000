@@ -1,0 +1,61 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage[utf8]{inputenc}
+%\usepackage{garamondlibre}
+\usepackage{ebgaramond}
+\usepackage{graphicx}
+
+
+\ifen\usepackage[english]{babel}\fi
+\ifbr\usepackage[brazilian]{babel}\fi
+
+\newcommand{\langen}[1]{%
+	\ifen\selectlanguage{english}#1\fi}
+\newcommand{\langbr}[1]{%
+	\ifbr\selectlanguage{brazilian}#1\fi}
+
+
+
+\langen{%
+	\def\videopac{Video-pac}}
+\langbr{%
+	\def\videopac{Video-pac}}
+
+\def\G7000{G7000}
+\def\ROMs{ROMs}
+
+\begin{document}
+
+\author{Graham Thomasson}
+
+\title{%
+	\langen{Crash course in G7000 games programming}
+	\langbr{Curso intensivo de programação de jogos para G7000}}
+
+\date{1983}
+
+\frontmatter
+\maketitle
+\tableofcontents
+
+\mainmatter
+
+\input{./sections/01.introduction}
+\input{./sections/02.the.8048.chip}
+\input{./sections/03.displaying.static.objects}
+\input{./sections/04.movement.of.objects.and.special.effects}
+\input{./sections/05.the.game-players.peripherals}
+\input{./sections/06.sound.effects}
+\input{./sections/07.typical.program.structure}
+\input{./sections/08.executive.routines}
+\input{./sections/09.standard.techniques}
+\appendix
+\input{./sections/a01.references}
+\input{./sections/a02.detailed.memory.maps}
+\input{./sections/a03.executive.listing}
+\input{./sections/a04.timing.of.tv.frame.scan}
+\input{./sections/a05.library.routines.and.development.utilities}
+
+\backmatter
+% bibliography, glossary and index would go here.
+
+\end{document}
